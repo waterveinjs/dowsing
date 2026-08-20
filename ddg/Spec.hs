@@ -58,7 +58,9 @@ evalNode currentVals (DynamicComputeDef c t e) =
 recomputeAll :: Model -> Model
 recomputeAll (Model d v) = Model d (M.foldlWithKey updateVal v d)
   where
-    updateVal acc i nodeDef = M.insert i (evalNode acc nodeDef) acc
+    updateVal acc i nodeDef = case nodeDef of
+        StateDef _          -> acc
+        DynamicComputeDef {} -> M.insert i (evalNode acc nodeDef) acc
 
 step :: Model -> Op -> Model
 step (Model d v) (CreateState i val) =
