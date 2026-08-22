@@ -34,4 +34,10 @@ runghc Spec.hs
 ```
 
 ## License
-We explicitly state that this software is licensed under the same [MIT license](LICENSE) as Watervein itself.
+
+This project is licensed under either of:
+
+* Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
